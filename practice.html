@@ -1,0 +1,171 @@
+<html>
+    <head>
+        <title>Practice</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <style>
+            *{
+                margin: 0; padding: 0;
+                box-sizing: border-box;
+            }
+            .menu-bar{
+                text-align: center;
+                background-color: black;
+            }
+            .menu-bar ul{
+                display: inline-flex;
+                list-style: none; 
+            }
+            .menu-bar ul li{
+                width: 120px;
+                margin: 15px;
+                padding: 15px;
+            }
+            .menu-bar ul li a{
+                text-decoration: none;
+                color: orange;
+            }
+            .menu-bar ul li a:hover{
+                color: white;
+            }
+            .active, .menu-bar ul li:hover{
+                background: green;
+                border-radius: 3px;
+            }
+            .sub-menu1{
+                display: none;
+            }
+            .contact:hover .sub-menu1{
+                display: block;
+                position: absolute;
+                background: rgb(0,100,0);
+                margin-top: 15px;
+                margin-left: -30px;
+            }
+            .contact:hover .sub-menu1 ul{
+                display: block;
+            }
+            .contact:hover .sub-menu1 ul li{
+                border-bottom: 1px dotted #fff;
+            }
+            .contact:hover .sub-menu1 ul li:last-child{
+                border: none;
+            }
+            .fa-angle-right{
+                color: white;
+                float: right;
+            }
+            .containt{
+                margin-left: 500px;
+            }
+            .phone-menu, .gmail-menu, .facebook-menu{
+                display: none;
+            }
+            .phone:hover .phone-menu, .gmail:hover .gmail-menu, .facebook:hover .facebook-menu{
+                display: block;
+                position: absolute;
+                margin-left: 105px;
+                background: rgb(0,100,0);
+                margin-top: -30px;
+            }
+/*********************  body part ********************/
+            .column{
+                float: left;
+                width: 24%;
+                padding: 20px;
+                border: solid black 2px;
+                margin-left: 10px;
+                border-radius: 3px;
+                background: gainsboro;
+            }
+            .title{
+                margin-bottom: 20px;
+                color: red;
+            }
+            .row{
+                margin: 25px 15px 0px 25px;
+            }
+            .column:hover{
+                background: blueviolet;
+                color: wheat;
+                cursor: pointer;
+                transition: all 1s;
+                transform: translateY(-10px);
+            }
+            .column:hover h1{
+                transform: translateX(100px);
+                transition: all 1s;
+                color: aqua;
+            }
+            .fab{
+                margin-right: 10px;
+            }
+            i{
+                margin-right: 0px;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="menu-bar">
+            <div class="containt">
+                <ul>
+                    <li class="active"><a href="#"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="#"><i class="fa fa-clone"></i>About us</a></li>
+                    <li><a href="#"><i class="fa fa-clone"></i>Services</a></li>
+                    
+                    <li class="contact"><a href="#"><i class="fa fa-phone"></i>Contact</a>
+                        <div class="sub-menu1">
+                            <ul>
+                                <li class="phone"><a href="#"><i class="fas fa-phone"></i>Phone</a><i class="fa fa-angle-right"></i>
+                                    <div class="phone-menu">
+                                        <ul>
+                                            <li><a href="#">01864910087</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="gmail"><a href="#"><i class="fas fa-mail-bulk"></i>Gmail</a><i class="fa fa-angle-right"></i>
+                                    <div class="gmail-menu">
+                                        <ul>
+                                            <li><a href="#">parvezcse35</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a><i class="fa fa-angle-right"></i>
+                                    <div class="facebook-menu">
+                                        <ul>
+                                            <li><a href="#">Masud Parvez</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+                <h1 class="title"><i class="fab fa-html5"></i>HTML</h1>
+                <p>Et dolor ipsum vero amet ea sit sed.Et dolor ipsum vero amet ea sit sed. Amet sit aliquyam ea ipsum. Eos ea sea vero magna rebum gubergren.</p>
+            </div>
+
+            <div class="column">
+                <h1 class="title"><i class="fab fa-css3"></i>CSS</h1>
+                <p>Et dolor ipsum vero amet ea sit sed.Et dolor ipsum vero amet ea sit sed. Amet sit aliquyam ea ipsum. Eos ea sea vero magna rebum gubergren.</p>
+            </div>
+
+            <div class="column">
+                <h1 class="title"><i class="fab fa-js-square"></i>JS</h1>
+                <p>Et dolor ipsum vero amet ea sit sed.Et dolor ipsum vero amet ea sit sed. Amet sit aliquyam ea ipsum. Eos ea sea vero magna rebum gubergren.</p>
+            </div>
+
+            <div class="column">
+                <h1 class="title"><i class="fab fa-bootstrap"></i>Bootstrap</h1>
+                <p>Et dolor ipsum vero amet ea sit sed.Et dolor ipsum vero amet ea sit sed. Amet sit aliquyam ea ipsum. Eos ea sea vero magna rebum gubergren.</p>
+            </div>
+
+        </div>
+    </body>
+</html>
